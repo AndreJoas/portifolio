@@ -6,8 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio Profissional</title>
     <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
-    <style></style>
+    <script defer src="back/script.js"></script>
+    <style>
+        .slideshow {
+            position: relative;
+            max-width: 100%;
+            width:    90%;
+            height: auto;
+            justify-content: center;
+            align-items: center;
+            text-align: justify;
+            flex-direction: column;
+        }
+
+        .slide {
+            display: none;
+            width: 100%;
+            height: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+            /* Ajusta a proporção da imagem */
+        }
+
+        .slide.active {
+            display: block;
+        }
+    </style>
 </head>
 
 <body>
@@ -26,7 +52,8 @@
                 </ul>
             </nav>
         </div>
-
+    
+          
     </header>
 
     <!-- Hero Section -->
@@ -53,16 +80,21 @@
             <h2>Projetos</h2>
             <div class="project-grid">
                 <div class="project-card">
-                    <img src="images/gamewupus.png" alt="Projeto 1">
-                    <h3>Projeto 1</h3>
-                    <p>Se trata de um jogo desenvolvido durante minha pós-graduação Seguindo algumas bases/princípios da Inteligencia Artificial</p>
-                    <a href="https://andrejoas.github.io/GameDevelop/" class="btn">Ver Mais</a>
-                </div>
-                <div class="project-card">
-                    <img src="project2.jpg" alt="Projeto 2">
-                    <h3>Projeto 2</h3>
-                    <p>Descrição breve do projeto.</p>
-                    <a href="#" class="btn">Ver Mais</a>
+
+                    <div class="slideshow" data-project="project1">
+                        <img src="images/wumpus/gamewupus.png" class="slide active " alt="Imagem 1 do Projeto 1">
+                        <img src="images/wumpus/wumpo2.png" class="slide" alt="Imagem 1 do Projeto 1">
+                        <img src="images/wumpus/wumpo3.png" class="slide" alt="Imagem 3 do Projeto 1">
+                        <img src="images/wumpus/wumpus1.png" class="slide" alt="Imagem 3 do Projeto 1">
+                    </div>
+                    <div class="texto">
+                        <h3>Projeto 1</h3>
+                        <p>Se trata de um jogo desenvolvido durante minha pós-graduação Seguindo algumas
+                            bases/princípios da
+                            Inteligencia Artificial</p>
+                        <a href="https://andrejoas.github.io/GameDevelop/" class="btn">Ver Mais</a>
+                    </div>
+
                 </div>
                 <div class="project-card">
                     <img src="project1.jpg" alt="Projeto 1">
